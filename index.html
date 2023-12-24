@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Application</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 col-sm-offset-3">
+      <div class="form-group">
+        <label for="frontData">Front</label>
+        <textarea name="" id="frontData" cols="30" rows="4" class="form-control"></textarea>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-group">
+        <label for="backData">Back</label>
+        <textarea name="" id="backData" cols="30" rows="4" class="form-control"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <button class="btn btn-success btn-lg btn-block" id="addCard">Add Card</button>
+    </div>
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="col-xs-12 text-center" id="cardField"></div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="scripts.js"></script> <!-- Link to your JavaScript file -->
+
+</body>
+</html>

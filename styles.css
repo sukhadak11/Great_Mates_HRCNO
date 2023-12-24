@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  background: url('https://cdn0.vox-cdn.com/uploads/chorus_asset/file/3493392/firewatch_150305_01.0.png') no-repeat center center fixed;
+}
+.container {
+  margin-top: 30px;
+}
+/* Apply the same transition effect on textareas */
+textarea {
+  transition: box-shadow 0.3s ease-in-out;
+}/* CSS for animated label for the "Front" text area */
+label[for="frontData"] {
+  font-size: 18px; /* Initial font size */
+  color: greenyellow; /* Initial color */
+  transition: font-size 0.3s ease, color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+label[for="frontData"]:hover {
+  color: rgb(50, 46, 46); /* Color change on hover */
+  font-size: 20px; /* Increase font size on hover */
+  letter-spacing: 2px; /* Increase letter spacing on hover */
+}
+
+/* CSS for animated label for the "Back" text area */
+label[for="backData"] {
+  font-size: 18px; /* Initial font size */
+  color: greenyellow; /* Initial color */
+  transition: font-size 0.3s ease, color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+label[for="backData"]:hover {
+  color: rgb(50, 46, 46); /* Color change on hover */
+  font-size: 20px; /* Increase font size on hover */
+  letter-spacing: 2px; /* Increase letter spacing on hover */
+}
+
+
+/* Hover effect for Front textarea */
+#frontData:hover {
+  box-shadow: 0 0 8px 2px blue; /* Adjust the shadow color and size as needed */
+}
+
+/* Hover effect for Back textarea */
+#backData:hover {
+  box-shadow: 0 0 8px 2px green; /* Adjust the shadow color and size as needed */
+}
+
+/* Add Card Button */
+#addCard {
+  background-color: blueviolet;
+  color: #fff;
+  border: none;
+  border-radius: 100px; /* Adjust the value to change the amount of curve */
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+#addCard:hover {
+  background-color: yellowgreen;
+  transform: scale(1.05); /* Scale the button slightly on hover */
+  border-radius: 12px; /* Adjust the value to change the amount of curve on hover */
+}
+
+
+/* CSS for the card animation with distance between cards */
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Add perspective to the container for 3D effect */
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Add transition for smoother animation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow to the card */
+  margin-bottom: 50px; /* Add margin between cards */
+}
+
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg); /* Rotate the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Modify shadow on hover */
+}
+
+.face {
+  box-shadow: 5px 5px 5px #aaa;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.face.front {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Notecard.jpg');
+}
+
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  border: 1px solid lightgray;
+}
